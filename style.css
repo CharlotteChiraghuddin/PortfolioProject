@@ -1,0 +1,91 @@
+body{
+    display: inline-grid;
+    height:1000px;
+    width:100%;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 15% 25% 25% 25%;
+    background-color:black;
+    row-gap: 2em;
+    color:white;
+    font-family:"Aguafina Script",serif;
+    letter-spacing:0.2em;
+}
+header{
+    grid-area: 1/1/2/5;
+    display:flex;
+    justify-content:space-between;
+    background-color:rgb(186, 247, 232);
+    color:black;
+}
+header h1{
+    font-size:4em;
+    font-weight:400;
+    width:50%;
+    text-wrap: nowrap;
+    padding: 0.4em 0 0 0.4em;
+    
+    margin:0;
+}
+nav{
+    padding:2em;
+    width:50%;
+}
+nav ul{
+    list-style-type: none;
+
+}
+nav ul li{
+    display: inline;
+    padding:1em;
+    font-size: 2em;
+}
+main{
+    grid-area: 2/1/4/5;
+    text-align:center;
+    display: inline-flex;
+}
+div.project2, div.project3, div.project4, div.mixed-messages{
+    justify-content:center;
+    width:100%;
+}
+img{
+    height: 100%;
+    width:auto;
+    border-radius: 2em;
+}
+img:hover{
+    border: 0.2em solid white;
+    opacity:75%;
+}
+.project2,.project3,.project4{
+    display:none;
+}
+.arrow-container{
+width:100%;
+}
+
+p{
+    position:relative;
+    top:31%;
+    padding:3em;;
+}
+
+.arrow{
+    border:solid white;
+    border-width: 0 8px 8px 0;
+    display:inline-block;
+    padding:2em;
+}
+.right{
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+.left{
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+footer{
+    grid-area: 4/1/5/5;
+    text-align:center;
+}
