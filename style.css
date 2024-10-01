@@ -144,12 +144,11 @@ border:2px solid white;
     border: 0.2em solid white;
     opacity:75%;
 }
-.project2,.project3,.project4{
+.teacozy,.naturetrail,.project4{
     display:none;
 }
 
-
-.projects p{
+.left-arrow, .right-arrow{
     display:flex;
     align-items: center;
 }
