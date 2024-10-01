@@ -20,12 +20,12 @@ header{
     margin:0;
     grid-gap:0;
     width:100%;
+    border-bottom: solid 2px white;
 }
 header h1{
     font-size:4em;
     font-weight:400;
     text-wrap: nowrap;
-
 }
 nav{
     height:100%;
@@ -52,24 +52,38 @@ main{
     grid-area:2/1/3/5;
     display:grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 5% 40% 5% 40% 5% 5%;
+    grid-template-rows: 5% 35% 5% 45% 5% 5%;
 }
+
 h2{
-    font-size:2em;
+    font-size:1.6em;
     margin:0;
     text-align:center;
+}
+
+.sub-heading-about{
+    grid-area:1/1/2/5;
+    display:inline-flex;
+    justify-content:space-between;
+}
+.sub-heading-about h2{
+    width:30%;
     background-color:rgb(186, 247, 232);
     color:black;
+    border:2px solid white;
+}
+.sub-heading-about p{
+width:100%;
+background-color:rgb(186, 247, 232);
+height:12%;
+border:2px solid white;
 }
 .about-me{
     grid-area:2/1/3/5;
     display:inline-flex;
     justify-content: space-around;
 }
-.about-heading{
-    grid-area:1/1/2/5;
 
-}
 .about-me p{
     width:70%;
     padding:0;
@@ -83,14 +97,29 @@ h2{
     margin:0;
     padding:0;
 }
-.project-heading{
+.sub-heading-project{
     grid-area: 3/1/4/5;
+    display: inline-flex;
+    justify-content: space-around;
+}
+.sub-heading-project h2{
+    width:30%;
+    background-color:rgb(186, 247, 232);
+    color:black;
+    border:2px solid white;
+}
+.sub-heading-project p{
+width:100%;
+background-color:rgb(186, 247, 232);
+height:12%;
+border:2px solid white;
 }
 .projects{
     grid-area: 4/1/5/5;
     display:inline-flex;
     justify-content:center;
     width:100%;
+    margin: 1% 0 1% 0;
 }
 div.project2, div.project3, div.project4, div.mixed-messages{
     height:100%;
@@ -129,19 +158,49 @@ div.project2, div.project3, div.project4, div.mixed-messages{
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
 }
-.skills-heading{
+.sub-heading-skills{
     grid-area:5/1/6/5;
+    display:inline-flex;
+    justify-content: space-between;
+}
+.sub-heading-skills h2{
+    width:30%;
+    background-color:rgb(186, 247, 232);
+    color:black;
+    border:2px solid white;
+}
+.sub-heading-skills p{
+width:100%;
+background-color:rgb(186, 247, 232);
+height:12%;
+border:2px solid white;
 }
 .skills{
     grid-area:6/1/7/5;
     display: inline-flex;
     justify-content: center;
+    margin:0.2% 0 0.2% 0;
 }
 .skills img{
     margin:0.2% 2.5% 0 2.5%;
 }
-.contact-heading{
+.sub-heading-contact{
     grid-area:3/1/4/5;
+    display:inline-flex;
+    justify-content: space-between;
+}
+.sub-heading-contact h2{
+    width:30%;
+    background-color:rgb(186, 247, 232);
+    color:black;
+    border:2px solid white;
+    height:80%;
+}
+.sub-heading-contact p{
+width:100%;
+background-color:rgb(186, 247, 232);
+height:12%;
+border:2px solid white;
 }
 footer{
     grid-area: 4/1/5/5;
@@ -149,8 +208,7 @@ footer{
     justify-content:center;
 }
 footer a {
-    margin: left 2em;
-    margin-right:2.5%;
+    margin: 0 1.2% 0 1.2%;
 }
 footer a img{
     height:100%;
