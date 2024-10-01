@@ -73,10 +73,10 @@ h2{
     border:2px solid white;
 }
 .sub-heading-about p{
-width:100%;
-background-color:rgb(186, 247, 232);
-height:12%;
-border:2px solid white;
+    width:100%;
+    background-color:rgb(186, 247, 232);
+    height:12%;
+    border:2px solid white;
 }
 .about-me{
     grid-area:2/1/3/5;
@@ -116,17 +116,27 @@ border:2px solid white;
 }
 .projects{
     grid-area: 4/1/5/5;
-    display:inline-flex;
-    justify-content:center;
-    width:100%;
-    margin: 1% 0 1% 0;
+    display: inline-flex;
+    align-items:center;
+    justify-content:space-between;
+
 }
-div.project2, div.project3, div.project4, div.mixed-messages{
-    height:100%;
-    width:50%;
+.descriptions{
+    height:auto;
+    width: 100%;
+    text-wrap:wrap;
+    margin-left: 5.5%;
 }
-.projects img{
-    height:100%;
+.left-arrow{
+   margin:2.5%;
+}
+.right-arrow{
+   margin:2.5%;
+}
+.project-preview{
+    width:70%;
+}
+.project-preview img{
     width:100%;
 }
 
