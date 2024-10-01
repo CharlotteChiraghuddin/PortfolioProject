@@ -3,9 +3,9 @@ body{
     height:1000px;
     width:100%;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 15% 25% 25% 25%;
+    grid-template-rows: 10% 80% 5% 5%;
     background-color:black;
-    row-gap: 2em;
+    row-gap:1%;
     color:white;
     font-family:"Aguafina Script",serif;
     letter-spacing:0.2em;
@@ -49,34 +49,70 @@ nav ul li{
 }
 
 main{
-    grid-area: 2/1/4/5;
-    text-align:center;
-    display: inline-flex;
+    grid-area:2/1/3/5;
+    display:grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 5% 40% 5% 40% 5% 5%;
 }
-div.project2, div.project3, div.project4, div.mixed-messages{
+h2{
+    font-size:2em;
+    margin:0;
+    text-align:center;
+    background-color:rgb(186, 247, 232);
+    color:black;
+}
+.about-me{
+    grid-area:2/1/3/5;
+    display:inline-flex;
+    justify-content: space-around;
+}
+.about-heading{
+    grid-area:1/1/2/5;
+
+}
+.about-me p{
+    width:70%;
+    padding:0;
+    font-size:1.6em;
+    margin:0;
+    margin-top: 0.4%;
+}
+.about-me img{
+    height:100%;
+    float:right;
+    margin:0;
+    padding:0;
+}
+.project-heading{
+    grid-area: 3/1/4/5;
+}
+.projects{
+    grid-area: 4/1/5/5;
+    display:inline-flex;
     justify-content:center;
     width:100%;
 }
-img{
-    height: 100%;
-    width:auto;
-    border-radius: 2em;
+div.project2, div.project3, div.project4, div.mixed-messages{
+    height:100%;
+    width:50%;
 }
-img:hover{
+.projects img{
+    height:100%;
+    width:100%;
+}
+
+.projects img:hover, footer img:hover{
     border: 0.2em solid white;
     opacity:75%;
 }
 .project2,.project3,.project4{
     display:none;
 }
-.arrow-container{
-width:100%;
-}
 
-p{
-    position:relative;
-    top:31%;
-    padding:3em;;
+
+.projects p{
+    display:flex;
+    align-items: center;
 }
 
 .arrow{
@@ -93,8 +129,30 @@ p{
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
 }
-
+.skills-heading{
+    grid-area:5/1/6/5;
+}
+.skills{
+    grid-area:6/1/7/5;
+    display: inline-flex;
+    justify-content: center;
+}
+.skills img{
+    margin:0.2% 2.5% 0 2.5%;
+}
+.contact-heading{
+    grid-area:3/1/4/5;
+}
 footer{
     grid-area: 4/1/5/5;
-    text-align:center;
+    display: inline-flex;
+    justify-content:center;
+}
+footer a {
+    margin: left 2em;
+    margin-right:2.5%;
+}
+footer a img{
+    height:100%;
+
 }
