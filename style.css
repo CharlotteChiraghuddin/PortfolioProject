@@ -144,8 +144,25 @@ border:2px solid white;
     border: 0.2em solid white;
     opacity:75%;
 }
-.teacozy,.naturetrail,.project4{
+.teacozy,.naturetrail,.project4,.mixed-messages{
     display:none;
+    opacity:0;
+    transition: opacity 60s ease-in;
+    width:100%;
+}
+.teacozy.active,.naturetrail.active,.mixed-messages.active{
+    display:block;
+    opacity: 1;
+    animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 .left-arrow, .right-arrow{
@@ -179,10 +196,10 @@ border:2px solid white;
     border:2px solid white;
 }
 .sub-heading-skills p{
-width:100%;
-background-color:rgb(186, 247, 232);
-height:12%;
-border:2px solid white;
+    width:100%;
+    background-color:rgb(186, 247, 232);
+    height:12%;
+    border:2px solid white;
 }
 .skills{
     grid-area:6/1/7/5;
