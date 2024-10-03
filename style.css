@@ -144,16 +144,23 @@ border:2px solid white;
     border: 0.2em solid white;
     opacity:75%;
 }
-.teacozy,.naturetrail,.project4,.mixed-messages{
+.teacozy,.naturetrail,.mixed-messages{
     display:none;
-    opacity:0;
-    transition: opacity 60s ease-in;
-    width:100%;
 }
 .teacozy.active,.naturetrail.active,.mixed-messages.active{
     display:block;
-    opacity: 1;
-    animation: slideIn 1s forwards;
+    /*opacity: 1;*/
+    animation: slideIn 1.5s forwards;
+    position:relative;
+    z-index:0;
+}
+.descriptions p{
+    display:none;
+    animation: fadeIn 1.5s ease-in;
+}
+.descriptions p.active-description{
+    display:block;
+    opacity:1;
 }
 
 @keyframes slideIn {
@@ -163,6 +170,10 @@ border:2px solid white;
     to {
         transform: translateX(0);
     }
+}
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% { opacity: 1;}
 }
 
 .left-arrow, .right-arrow{
@@ -175,6 +186,8 @@ border:2px solid white;
     border-width: 0 8px 8px 0;
     display:inline-block;
     padding:2em;
+    position:relative;
+    z-index:1;
 }
 .right{
     transform: rotate(-45deg);

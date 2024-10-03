@@ -1,30 +1,25 @@
 const a1 = ['teacozy', 'naturetrail', 'mixed-messages'];
-const a2 = ['mixed-messages', 'teacozy', 'naturetrail'];
 
 let eventTarget = document.getElementsByClassName('right-arrow')[0];
 let i = 0;
 
 const rightArrow = () => {
-    // Remove active class from all slides
+    // Remove active and active-description class from all slides
     a1.forEach(className => {
         let elements = document.getElementsByClassName(className);
         for (let element of elements) {
             element.classList.remove('active');
-        }
-    });
-
-    a2.forEach(className => {
-        let elements = document.getElementsByClassName(className);
-        for (let element of elements) {
-            element.classList.remove('active');
+            element.classList.remove('active-description');
         }
     });
 
     // Add active class to new slides
-    let elementsToShow = document.getElementsByClassName(a1[i]);
-    for (let element of elementsToShow) {
-        element.classList.add('active');
-    }
+    let previewToShow = document.getElementsByClassName(a1[i])[0];
+    previewToShow.classList.add('active');
+
+    // Add active-description class to new description
+    let descriptionToShow = document.getElementsByClassName(a1[i])[1];
+    descriptionToShow.classList.add('active-description');
 
     // Increment index
     i++;
